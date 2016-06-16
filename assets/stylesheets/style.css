@@ -1,0 +1,39 @@
+body, div, h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#title {
+  text-align: center;
+}
+
+#board {
+  position: relative;
+  display: none;
+  margin: auto;
+  border: 10px solid black;
+}
+
+
+
+.selected {
+  background: orange;
+}
+
+.tile {
+  position: absolute;
+  float: left;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+}
+
+.
