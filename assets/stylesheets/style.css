@@ -2,38 +2,62 @@ body, div, h1 {
   margin: 0;
   padding: 0;
   border: 0;
+
+  font-family: inherit;
 }
 
 
-.group:after {
-  content: "";
-  display: block;
-  clear: both;
+body {
+  font-family: helvetica;
+  font-size: 13px;
+  color: grey;
+  font-weight: bold;
 }
 
 #title {
   text-align: center;
+  font-size: 30px;
+  letter-spacing: 10px;
+  padding: 20px;
+  text-transform: uppercase;
 }
 
 #board {
   position: relative;
   display: none;
   margin: auto;
-  border: 10px solid black;
-}
 
-
-
-.selected {
-  background: orange;
+  border: 5px solid black;
+  background: black;
 }
 
 .tile {
   position: absolute;
-  float: left;
-  width: 50%;
-  height: 50%;
+  /*float: left;*/
+  width: 25%;
+  height: 25%;
   text-align: center;
+  box-shadow: inset 0 0 .5px black;
+
+  background: white;
+
+
 }
 
-.
+.on {
+  background: rgb(65, 208, 135);
+}
+
+.tile.selected {
+  box-shadow: inset 0 0 5px 2px #ed801b;
+}
+
+@keyframes wiggle {
+  0% {transform: rotateZ(2deg);}
+  50% {transform: rotateZ(-2deg);}
+  100% {transform: rotateZ(2deg);}
+}
+
+.wiggle {
+  animation: wiggle 0.2s ease infinite;
+}
