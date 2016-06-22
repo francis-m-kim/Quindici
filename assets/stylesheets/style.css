@@ -62,7 +62,8 @@ body {
 
 .on {
   /*background: rgba(79, 163, 224, 0.92);*/
-  background-image: url(../images/flag.jpg);
+  background-image: url(../images/musicians.jpg);
+  /*background-size: 200px 200px;*/
 }
 
 @keyframes fadein {
