@@ -1,7 +1,10 @@
+<!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="utf-8">
         <title>Quindici</title>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         <script type="text/javascript" src="lib/bundle.js" charset="utf-8"></script>
         <link rel="stylesheet" text="text/css" href="assets/stylesheets/style.css">
@@ -10,6 +13,56 @@
     <body>
       <h1 id="title">Quindici</h1>
       <div id="board"></div>
+      <div id="settings-form">
+
+        <div id="settings">
+
+          <div id="column-1">
+            <div id="row-1">
+
+              <label> Reveal all tiles
+                <input id="reveal-all" type="checkbox">
+              </label>
+              &nbsp;
+              <div id="hide-label">
+                <label> Hide numbers
+                  <input id="show-numbers-toggle" type="checkbox"><br>
+
+                </label>
+              </div>
+
+            </div>
+
+            <div id="row-2">
+              <label> Dimension
+                <input id="dimension" type="range" min="3" max= "10" value="4"/>
+              </label>
+              <label> Difficulty
+                <input id="difficulty" type="range" min="1" max= "64" value="16"/><br>
+              </label>
+            </div>
+
+
+            <label> Change image &nbsp;
+              <input id="image-path" placeholder="Enter image / gif URL"/><br>
+            </label>
+          </div>
+
+          <div id="column-2">
+            <!-- <input id="reshuffle" type="button" value="Reshuffle"> -->
+            <div class="button" id="reshuffle">RESHUFFLE</div>
+
+          </div>
+
+        </div>
+
+        <div id="win-settings">
+          <div id="win-message"> You won </div>
+          <!-- <input id="play-again" type="button" value="Play again"> -->
+          <div class="button" id="play-again"> Play again </div>
+        </div>
+
+      </div>
 
     </body>
 
