@@ -29,7 +29,7 @@ body {
   padding: 10px;
   text-align: center;
 
-  font-size: 60px;
+  font-size: 50px;
   letter-spacing: 6px;
 }
 
@@ -48,11 +48,12 @@ body {
 
 #settings {
   display: none;
-  padding: 15px;
+  padding: 15px 15px 0px 15px;
   width: 71%;
   margin: 0px auto;
   text-align: center;
   font-size: 18px;
+
 }
 
 
@@ -243,4 +244,62 @@ input[type="checkbox"] {
 
 .over {
   animation: fadein 2s forwards;
+}
+
+
+
+
+footer {
+  display: none;
+  text-align: center;
+}
+
+footer a{
+  color: rgb(170,170,170);
+  margin-right: 10px;
+}
+
+
+
+
+#instruction-modal {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  margin: auto;
+
+  border: 2px solid black;
+  border-radius: 3px;
+  background: rgba(255,255,255, .93);
+
+  font-size: 18px;
+  letter-spacing: 1px;
+
+}
+
+#instruction-header {
+  font-size: 30px;
+  margin: 10px 10px 15px 10px;
+}
+
+
+#instruction-close {
+  float: right;
+  transition: color .33s;
+  font-size: 20px;
+}
+
+#instruction-close:hover {
+  color: #d71a0e;
+  cursor: pointer;
+}
+
+#instruction-body {
+  margin: 0 10px 10px 10px;
+  line-height: 26px;
+}
+
+#instruction-body p { margin: 0;}
+#instruction-body p:not(:first-child) {
+  text-indent: 1em;
 }
