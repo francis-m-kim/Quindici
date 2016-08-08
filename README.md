@@ -1,25 +1,15 @@
 # Quindici
 
-Essentially this will be a video-fied version of the classic Game of 15 puzzle game. Rather than being numbered, each tile of the 15 will be a fragment of the original video. The player will move the tiles until they are all in their ordained position.
+This is an update of the classic Game of 15 puzzle, using an image or GIF as a background. The aim of the game is to order the numbered image fragments from lowest to highest (left to right, top to bottom) with a blank space in the lower right corner. In other words, the game is won when the image is in order again.
 
-What needs to be figured out:
+Tiles that are not in the correct position are given a white square by default, but this can be changed with the controls below the board. The numbers can also be hidden. The dimensions of the board can be reset to anything between a 3 x 3 grid and a well-nigh impossible 10 x 10. To change the image or GIF background, simply paste an image URL in the text input field and click reshuffle.
 
-1. How to play videos in HTML.
-2. How to click videos on/off.
-3. How to show only a swatch of a video in an HTML element.
-4. How to get multiple elements playing fragments of the same video without reloading the same video
+According to [Wikipedia](https://en.wikipedia.org/wiki/15_puzzle#Solvability), half of all possible starting positions are impossible to resolve. To work around this, I created a simple AI to play the game backwards from the solved state. This of course ensures that every instance of the game is solvable. The function is called `createWinnableGame`, which takes an arguments of the number of `movesFromWinning` and is controlled by the difficulty slider.
 
-If the whole video aspect is too cumbersome or difficult, I could settle for just a still image. But it would look a lot less cool for sure.
+###A couple clips of the game in action:
 
-Main division of the project:
+![sample1](samples/sample1.png)
+![sample2](samples/sample2.png)
+![sample3](samples/sample3.png)
 
-* Create tile class
-  * tile responds to click on/off
-  * tile can be moved – a given tile can only move to one spot or not at all, i.e. moves should be validated.
-
-* Create board class
-  * board is initialized with the image/video shuffled
-  * size of board on screen should be proportional to original. Otherwise some sort of cropping needs to be done.
-
-* Create game class
-  * is the game over? Make something happen when it is.
+The game is more compelling with video. Give it a try!
